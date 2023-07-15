@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'tasks',
     'tasker_app',
+    'register',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
