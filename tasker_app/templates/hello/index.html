@@ -1,20 +1,14 @@
 {% extends 'hello/base.html' %}
   {% block content %}
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-    <div class="text-center align-middle" id="diver">
-      <h2>Make your life easier with <h1>Tasker</h1></h2>
-      <br>
-      <a class="btn btn-outline-primary" type="button" href="{% url 'register:index' %}">Register</a>
+  
+    <div class="outer">
+      <div class="middle">
+        <div class="inner">
+          <h1>Make your life easier with Tasker</h1>
+          <br>
+          <button type="button" class="btn btn-primary btn-lg"><a class="rega" href="{% url 'register:index' %}"><b>Register</b></a></button>
+          
+        </div>
+      </div>
     </div>
   {% endblock %}
