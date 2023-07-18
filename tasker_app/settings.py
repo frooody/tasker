@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'crispy_forms',
     'tasks',
+    'login',
     'tasker_app',
     'register',
     'django.contrib.admin',
