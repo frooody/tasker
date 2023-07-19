@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.urls import include
 from django.contrib.auth.forms import UserCreationForm
 # Create your iews here.
 from .forms import NewUserForm
@@ -14,7 +15,7 @@ def index(request):
             form.save()
             user = form.cleaned_data.get('username')
             messages.success(request, 'Account was created for ' + user)
-            return redirect('login')
+            return redirect('login:index')
         else:
             messages.info(request, "Form isn't valid")
     return render(request, 'register/register.html', context)
