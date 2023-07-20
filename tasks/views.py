@@ -5,6 +5,6 @@ from django.http import HttpResponse
 tasks = ['asd', 'xcv', 'ewq']
 
 def index(request):
-    return render(request, 'tasks/index.html', {
-        "tasks": tasks
-    })
+    return render(request, 'tasks/index.html')
+def add(request):
+    return render(request, 'tasks/add.html')

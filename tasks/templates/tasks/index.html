@@ -1,19 +1,55 @@
 {% extends 'hello/base.html' %}
 {% block content %}
-<div class="card mb-2" style="width: 38rem;">
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-      <a href="#" class="btn btn-secondary">Dsadsa</a>
+<div class="container text-center">
+  <div class="container" style="height: 200px; margin-top: 50px;">
+    <h1>Go add some tasks!</h1>
+    <br>
+    <button type="button" class="btn btn-success btn-lg"><a class="rega" href="{% url 'tasks:add' %}"><b>Add</b></a></button>
+          
+  </div>
+  <div class="row align-items-start">
+    <div class="col">
+      <h1>СРОЧНОО</h1>
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-secondary">Dsadsa</a>
+        </div>
+      </div>
+      <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-secondary">Dsadsa</a>
+          </div>
+      </div>
     </div>
-</div>
-<div class="card mb-2" style="width: 28rem;">
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-      <a href="#" class="btn btn-secondary">Dsadsa</a>
+    <div class="col">
+      <h1>Не забивай</h1>
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-secondary">Dsadsa</a>
+        </div>
     </div>
+    </div>
+    <div class="col">
+      <h1>Подождёт</h1>
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-secondary">Dsadsa</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 {% endblock %}
