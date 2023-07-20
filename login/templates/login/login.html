@@ -11,26 +11,17 @@
               <form action="" method="POST" class="poster">
                 {% csrf_token %}
                 <div class="input-group mb-4">
-                  <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                  <span class="input-group-text"  id="inputGroup-sizing-default">@</span>
                   <input class="form-control" placeholder="Username" required="" type="text" name="username">
                 </div>
                 <div class="input-group mb-4">
-                  <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                  <span class="input-group-text" id="inputGroup-sizing-default">*</span>
                   <input type="password" id="myInput" placeholder="Password" name="password" class="form-control" data-toggle="password">                  
                 </div>
                 <div class="input-group mb-4 d-grid">
-                  <input type="button" class="btn btn-primary" onclick="myFunction()" value="Show password" style="color: aliceblue;"> 
+                  <input type="button" class="btn btn-primary" onclick="myFunction()" value="Show password" style="color: aliceblue;" id="show"> 
                 </div>
-                {% if messages %}
-                  <ul class="messages">
-                      {% for message in messages %}
-                      <li {% if message.tags %} class="{{ message.tags }}"{% endif %} style="list-style-type: none; color:rgb(195, 67, 67);">
-                          {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
-                          {{ message }}
-                      </li>
-                      {% endfor %}
-                  </ul>
-                {% endif %} 
+                
 
                 <div class="d-grid">
                   <button type="submit" class="btn btn-success">Sign in</button>
@@ -41,7 +32,16 @@
                 </div>
 
               </form>
-              
+              {% if messages %}
+                  <ul class="messages">
+                      {% for message in messages %}
+                      <li style="list-style-type: none; color:rgb(195, 67, 67);">
+                          {{ message }}
+                      </li>
+                      {% endfor %}
+                  </ul>
+
+              {% endif %} 
             </div>
           </div>
         </div>

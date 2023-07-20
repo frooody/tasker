@@ -1,9 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Hello</title>
-    </head>
-    <body>
-        Hello World! Tas
-    </body>
-</html>
+{% extends 'hello/base.html' %}
+{% block content %}
+<div class="card mb-2" style="width: 38rem;">
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-secondary">Dsadsa</a>
+    </div>
+</div>
+<div class="card mb-2" style="width: 28rem;">
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-secondary">Dsadsa</a>
+    </div>
+</div>
+{% endblock %}

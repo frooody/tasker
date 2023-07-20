@@ -13,4 +13,5 @@ def index(request):
             return redirect('register:index')
         else:
             messages.info(request, "Username or password incorrect.")
+
     return render(request, 'login/login.html')
