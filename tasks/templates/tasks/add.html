@@ -1,4 +1,10 @@
 {% extends 'hello/base.html' %}
 {% block content %}
-<a href="{% url 'tasks:index' %}">dasdsa</a>
+    <h1>Add tasks</h1>
+    <form action="{% url 'tasks:add' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    <a href="{% url 'tasks:index' %}">back to tasks</a>
 {% endblock %}

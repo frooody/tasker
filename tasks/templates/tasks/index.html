@@ -4,12 +4,15 @@
   <div class="container" style="height: 200px; margin-top: 50px;">
     <h1>Go add some tasks!</h1>
     <br>
-    <button type="button" class="btn btn-success btn-lg"><a class="rega" href="{% url 'tasks:add' %}"><b>Add</b></a></button>
-          
+    <a href="{% url 'tasks:add' %}" class="btn btn-success btn-lg">Add task</a>     
   </div>
   <div class="row align-items-start">
     <div class="col">
-      <h1>СРОЧНОО</h1>
+      <h1>Срочно</h1>
+
+      {% for task in tasks %}
+      {% endfor %}
+
       <div class="card mb-2">
         <div class="card-body">
           <h5 class="card-title">Special title treatment</h5>
@@ -22,13 +25,13 @@
           <div class="card-body">
             <h5 class="card-title">Special title treatment</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="{% url 'tasks:add' %}" class="btn btn-primary">Go somewhere</a>
             <a href="#" class="btn btn-secondary">Dsadsa</a>
           </div>
       </div>
     </div>
     <div class="col">
-      <h1>Не забивай</h1>
+      <h1>Средне</h1>
       <div class="card mb-2">
         <div class="card-body">
           <h5 class="card-title">Special title treatment</h5>
@@ -39,7 +42,7 @@
     </div>
     </div>
     <div class="col">
-      <h1>Подождёт</h1>
+      <h1>Не срочно</h1>
       <div class="card mb-2">
         <div class="card-body">
           <h5 class="card-title">Special title treatment</h5>
