@@ -7,51 +7,54 @@
     <a href="{% url 'tasks:add' %}" class="btn btn-success btn-lg">Add task</a>     
   </div>
   <div class="row align-items-start">
-    <div class="col">
-      <h1>Срочно</h1>
+    {% for task in tasks %}
+    
+      <div class="col">
+        <h1>Срочно</h1>
 
-      {% for task in tasks %}
-      {% endfor %}
+      
 
-      <div class="card mb-2">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-          <a href="#" class="btn btn-secondary">Dsadsa</a>
-        </div>
-      </div>
-      <div class="card mb-2">
+        <div class="card mb-2">
           <div class="card-body">
             <h5 class="card-title">Special title treatment</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="{% url 'tasks:add' %}" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-secondary">Dsadsa</a>
+          </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="{% url 'tasks:add' %}" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-secondary">Dsadsa</a>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+        <h1>Средне</h1>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
             <a href="#" class="btn btn-secondary">Dsadsa</a>
           </div>
       </div>
-    </div>
-    <div class="col">
-      <h1>Средне</h1>
-      <div class="card mb-2">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-          <a href="#" class="btn btn-secondary">Dsadsa</a>
-        </div>
-    </div>
-    </div>
-    <div class="col">
-      <h1>Не срочно</h1>
-      <div class="card mb-2">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-          <a href="#" class="btn btn-secondary">Dsadsa</a>
+      </div>
+      <div class="col">
+        <h1>Не срочно</h1>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-secondary">Dsadsa</a>
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
+    
   </div>
 </div>
 
