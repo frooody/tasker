@@ -15,17 +15,18 @@ class NewTaskForm(forms.Form):
 
 # Create your views here.
 def index(request):
-    if "tasks" not in request.session:
-        request.session["tasks"] = []
     return render(request, 'tasks/index.html', {
-        "tasks": request.session["tasks"]
+        "tasks": request.session["tasks"],
+
     })
 def add(request):
     if request.method == 'POST':
         form = NewTaskForm(request.POST)
         if form.is_valid():
             task = form.cleaned_data['task']
+            priority = form.cleaned_data['priority']
             request.session['tasks'] += [task]
+            request.session['tasks'] += [priority]
             return HttpResponseRedirect(reverse("tasks:index"))
         else:
             return render(request, "tasks/add.html", {
